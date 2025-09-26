@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+  {% for title, description, image, url in context %}
+    <div class="article">
+      {% if image %}
+        <img src="{{ image }}" alt="{{ title }}">
+      {% endif %}
+      <div class="article-content">
+        <h2>{{ title }}</h2>
+        <p>{{ description }}</p>
+        <a href="{{ url }}" target="_blank" rel="noopener">Read more</a>
+      </div>
+    </div>
+  {% endfor %}
+{% endblock %}

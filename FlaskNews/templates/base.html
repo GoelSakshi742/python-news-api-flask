@@ -1,0 +1,146 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <title>News App</title>
+      <style>
+        body {
+          font-family: Arial, sans-serif;
+          max-width: 900px;
+          margin: auto;
+          padding: 20px;
+          background-color: #f8f9fa;
+        }
+        header {
+          text-align: center;
+          padding-bottom: 15px;
+          border-bottom: 2px solid #343a40;
+        }
+        .article {
+          background: white;
+          border-radius: 8px;
+          box-shadow: 0px 2px 8px rgba(0,0,0,0.1);
+          margin-bottom: 20px;
+          padding: 15px;
+          display: flex;
+          gap: 15px;
+          align-items: flex-start;
+        }
+        .article img {
+          border-radius: 5px;
+          width: 150px;
+          height: auto;
+          object-fit: cover;
+        }
+        .article-content {
+          max-width: 700px;
+        }
+        h2 {
+          margin-top: 0;
+          margin-bottom: 10px;
+          color: #007bff;
+        }
+        a {
+          text-decoration: none;
+          color: #007bff;
+          font-weight: bold;
+        }
+        a:hover {
+          text-decoration: underline;
+        }
+        body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 20px;
+      background-color: #f0f2f5;
+      color: #333;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #004085;
+    }
+
+    .article {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+      padding: 15px;
+      display: flex;
+      gap: 20px;
+      transition: box-shadow 0.3s ease;
+    }
+
+    .article:hover {
+      box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    }
+
+    .article img {
+      width: 150px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 6px;
+      flex-shrink: 0;
+    }
+
+    .article h2 {
+      margin: 0 0 10px 0;
+      font-size: 1.25rem;
+      color: #0056b3;
+    }
+
+    .article p {
+      margin: 0 0 15px 0;
+      line-height: 1.5;
+      color: #555;
+    }
+
+    .article a {
+      color: #007bff;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .article a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      .article {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      .article img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+      </style>
+      {% block extra_head %}{% endblock %}
+    </head>
+    <body>
+      <header>
+        <form action="/" method="GET" style="margin-bottom: 20px; text-align: center;">
+    <input 
+      type="text" 
+      name="keyword" 
+      placeholder="Search news by keyword..." 
+      value="{{ request.args.get('keyword', '') }}" 
+      style="width: 60%; padding: 8px; font-size: 1rem; border-radius: 4px; border: 1px solid #ccc;"
+    />
+    <button type="submit" style="padding: 8px 16px; font-size: 1rem; border-radius: 4px; background-color: #0056b3; color: white; border: none; cursor: pointer;">
+      Search
+    </button>
+  </form>
+        <h1>Top Headlines</h1>
+      </header>
+      <main>
+        {% block content %}{% endblock %}
+      </main>
+    </body>
+    </html>
