@@ -84,4 +84,6 @@ Distributed under the MIT License.
 
 ## 📫 Contact
 
-[Your Name](mailto:your.email@example.com) | [GitHub Profile](https://github.com/yourusername)
+Sakshi Goel
+(mailto:ersakshigoel@gmail.com) | [GitHub Profile]
+https://github.com/GoelSakshi742
