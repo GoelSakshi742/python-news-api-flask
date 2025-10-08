@@ -1,7 +1,7 @@
 # 📰 Python Flask News API Application
 
 _A sleek Flask web app that fetches and displays the latest news headlines using the NewsAPI, featuring keyword search, article summaries, and image previews for a smooth browsing experience._
-
+This app does data collection from web source using web API and API token for authentication
 ---
 
 ## ✨ Features
